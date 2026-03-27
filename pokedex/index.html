@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokéDex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-logo">
+        <img src="/pokedex/assets/logo.png" alt="Logo PokéDex" class="logo" />
+      </div>
+      <nav class="header-nav">
+        <a href="#" class="nav-pill active">Home</a>
+        <a href="#" class="nav-pill">Pokédex</a>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="search-bar">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Faça uma busca pelo nome do pokémon"
+        />
+        <button class="search-btn" aria-label="Buscar">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="pokemon-grid" id="pokemon-grid">
+        <!-- Rascunho do card — será gerado dinamicamente pelo script.js -->
+      </div>
+
+      <div class="pagination">
+        <button class="page-prev disabled" disabled>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+          Anterior
+        </button>
+        <div class="page-numbers">
+          <button class="page-num active">1</button>
+          <button class="page-num">2</button>
+          <button class="page-num">3</button>
+        </div>
+        <button class="page-next">
+          Próximo
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="9 18 15 12 9 6" />
+          </svg>
+        </button>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
