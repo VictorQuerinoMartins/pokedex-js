@@ -1,11 +1,13 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   background-color: #ffffff;
   color: #212e4c;
   min-height: 100vh;
@@ -79,7 +81,7 @@ body {
   flex: 1;
   border: none;
   background: transparent;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   color: #49454f;
   outline: none;
@@ -129,7 +131,9 @@ body {
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
   overflow: hidden;
 }
 
@@ -151,15 +155,33 @@ body {
   font-weight: 700;
 }
 
-.pokemon-type.grass  { color: #11b047; }
-.pokemon-type.fire   { color: #ff4e00; }
-.pokemon-type.water  { color: #1565c0; }
-.pokemon-type.electric { color: #f4c200; }
-.pokemon-type.psychic  { color: #c2185b; }
-.pokemon-type.normal   { color: #8d8d8d; }
-.pokemon-type.ghost    { color: #7b1fa2; }
-.pokemon-type.dragon   { color: #1565c0; }
-.pokemon-type.ice      { color: #0097a7; }
+.pokemon-type.grass {
+  color: #11b047;
+}
+.pokemon-type.fire {
+  color: #ff4e00;
+}
+.pokemon-type.water {
+  color: #1565c0;
+}
+.pokemon-type.electric {
+  color: #f4c200;
+}
+.pokemon-type.psychic {
+  color: #c2185b;
+}
+.pokemon-type.normal {
+  color: #8d8d8d;
+}
+.pokemon-type.ghost {
+  color: #7b1fa2;
+}
+.pokemon-type.dragon {
+  color: #1565c0;
+}
+.pokemon-type.ice {
+  color: #0097a7;
+}
 
 .pokemon-number {
   font-size: 13px;
@@ -168,10 +190,10 @@ body {
 }
 
 .pokemon-img {
-  width: 140px;
-  height: 140px;
+  width: 143px;
+  height: 143px;
   object-fit: contain;
-  margin-top: 8px;
+  margin-top: 36px;
   flex-shrink: 0;
 }
 
@@ -180,8 +202,8 @@ body {
   font-weight: 700;
   color: #212e4c;
   text-align: center;
-  margin-top: auto;
-  padding: 0 8px 14px;
+  margin-top: 14px;
+  padding: 0 0 7px;
   line-height: 14px;
 }
 
@@ -201,7 +223,7 @@ body {
   padding: 8px 12px;
   border: none;
   background: transparent;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
@@ -231,7 +253,7 @@ body {
   padding: 8px 12px;
   border: none;
   background: transparent;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 16px;
   cursor: pointer;
   border-radius: 8px;
@@ -284,8 +306,7 @@ body {
   }
 }
 
-
-.logo{
+.logo {
   width: 120px;
   height: auto;
 }
