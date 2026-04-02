@@ -24,7 +24,7 @@ Atualmente, o projeto conta com:
 - [x] Estrutura de interface (Header, Search Bar e Pagination).
 
 **Próximas implementações:**
-- [ ] Lógica funcional para a barra de busca (filtro em tempo real).
+- [x] Lógica funcional para a barra de busca (filtro em tempo real).
 - [ ] Implementação da lógica de paginação (offset/limit).
 - [ ] Tratamento de erros para falhas na requisição (Try/Catch).
 - [ ] Refatoração para melhorar a performance das chamadas (Promise.all).
