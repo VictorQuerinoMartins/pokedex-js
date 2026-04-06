@@ -13,23 +13,6 @@ Este projeto demonstra a integração de APIs RESTful e a manipulação dinâmic
 * **Template Literals:** Geração dinâmica de componentes HTML via script.
 * **CSS Moderno:** Grid Layout e Flexbox para interface responsiva.
 
----
-
-## 🏗️ Status: Em Desenvolvimento
-
-Atualmente, o projeto conta com:
-- [x] Integração base com a PokéAPI.
-- [x] Renderização dinâmica dos primeiros 151 Pokémon.
-- [x] Estilização básica dos cards e sistema de grid.
-- [x] Estrutura de interface (Header, Search Bar e Pagination).
-
-**Próximas implementações:**
-- [x] Lógica funcional para a barra de busca (filtro em tempo real).
-- [ ] Implementação da lógica de paginação (offset/limit).
-- [ ] Tratamento de erros para falhas na requisição (Try/Catch).
-- [ ] Refatoração para melhorar a performance das chamadas (Promise.all).
-
----
 
 ## 🚀 Como Executar
 1. Clone este repositório:
