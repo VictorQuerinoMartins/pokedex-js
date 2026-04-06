@@ -1,4 +1,4 @@
-# ⚡ PokéDex (Work in Progress)
+# ⚡ PokéDex
 
 Uma aplicação interativa para exploração de Pokémon, desenvolvida com **JavaScript Vanilla**, focada no consumo técnico da [PokéAPI](https://pokeapi.co/).
 
