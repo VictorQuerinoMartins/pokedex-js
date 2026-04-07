@@ -14,7 +14,29 @@ Este projeto demonstra a integração de APIs RESTful e a manipulação dinâmic
 * **CSS Moderno:** Grid Layout e Flexbox para interface responsiva.
 
 
+## 📸 Preview do Projeto
+ <img width="1863" height="921" alt="image" src="https://github.com/user-attachments/assets/dbdc7157-ff3d-4149-9a1e-974a91dfb0d8" />
+
+
+
 ## 🚀 Como Executar
 1. Clone este repositório:
    ```bash
    git clone [https://github.com/SEU_USUARIO/pokedex-js.git](https://github.com/SEU_USUARIO/pokedex-js.git)
+
+## 📈 Possíveis Melhorias Futuras
+
+- [ ] Implementar sistema de favoritos utilizando `localStorage`
+
+- [ ] Adicionar Skeleton Loading durante o carregamento da API
+
+- [ ] Criar filtro por tipo de Pokémon
+- [ ] Implementar ordenação por:
+  - [ ] Nome
+  - [ ] Número
+  - [ ] Tipo
+
+- [ ] Melhorar a experiência em dispositivos mobile
+
+- [ ] Adicionar animações sutis na troca de páginas
+- [ ] Implementar tema Dark Mode
