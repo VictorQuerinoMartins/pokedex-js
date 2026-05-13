@@ -64,13 +64,20 @@ body {
   gap: 32px;
 }
 
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 900px;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
   background-color: #f2f2f7;
   border-radius: 28px;
-  width: 100%;
-  max-width: 720px;
+  flex: 1;
   padding: 4px 4px 4px 20px;
   height: 56px;
 }
@@ -144,6 +151,46 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 13px 0;
+}
+
+#filtro-tipo {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #f2f2f7;
+  border: none;
+  border-radius: 28px;
+  padding: 12px 44px 12px 20px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  color: #49454f;
+  cursor: pointer;
+  outline: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2349454f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  min-width: 180px;
+  align-self: center;
+}
+
+#filtro-tipo:hover {
+  background-color: #e8e8f0;
+}
+
+body.dark-mode #filtro-tipo {
+  background-color: #1e1e2e;
+  color: #e2e8f0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23e2e8f0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+}
+
+body.dark-mode #filtro-tipo option {
+  background-color: #1e1e2e;
+  color: #e2e8f0;
+}
+
+.pokemon-tipos {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .pokemon-type {
@@ -265,6 +312,21 @@ body {
 .page-num.active {
   background-color: #2c2c2c;
   color: #f5f5f5;
+}
+
+@keyframes gridFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid-fade {
+  animation: gridFadeIn 0.25s ease-out;
 }
 
 @keyframes pulse {
