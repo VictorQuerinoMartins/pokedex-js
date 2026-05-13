@@ -12,14 +12,21 @@ function desenharTela(listaDeDados) {
   const pokemonsDaPagina = listaDeDados.slice(pginicio, pgfim);
 
   const grid = document.querySelector("#pokemon-grid");
+  grid.classList.remove("grid-fade");
+  void grid.offsetWidth;
+  grid.classList.add("grid-fade");
   grid.innerHTML = "";
 
   for (let i = 0; i < pokemonsDaPagina.length; i++) {
     const dadosPokemon = pokemonsDaPagina[i];
 
+    const tiposHTML = dadosPokemon.types
+      .map(t => `<span class="pokemon-type ${t.type.name}">${t.type.name}</span>`)
+      .join("");
+
     const cardHTML = `<div class="pokemon-card">
         <div class="card-top">
-          <span class="pokemon-type ${dadosPokemon.types[0].type.name}">${dadosPokemon.types[0].type.name}</span>
+          <div class="pokemon-tipos">${tiposHTML}</div>
           <span class="pokemon-number">${dadosPokemon.order}</span>
         </div>
         <img
@@ -105,32 +112,39 @@ btnTema.addEventListener("click", function () {
 });
 
 const input = document.querySelector(".search-input"); // input para pesquisa
+const selectTipo = document.querySelector("#filtro-tipo");
 
-input.addEventListener("input", function () {
-  const valorInput = input.value.toLowerCase();
-  const pokemonsFiltrados = todosPokemons.filter((pokemon) =>
-    pokemon.name.includes(valorInput),
-  );
+input.addEventListener("input", aplicarFiltros);
+selectTipo.addEventListener("change", aplicarFiltros);
 
-  if (input.value === "") {
+function aplicarFiltros() {
+  const valorTexto = input.value.toLowerCase();
+  const valorTipo = selectTipo.value;
+
+  if (valorTexto === "" && valorTipo === "") {
     paginaAtual = 1;
     desenharTela(todosPokemons);
+    return;
   }
 
+  const pokemonsFiltrados = todosPokemons.filter((pokemon) => {
+    const passaNome = pokemon.name.includes(valorTexto);
+   
+    const passaTipo = valorTipo === "" || pokemon.types.some(t => t.type.name === valorTipo);
+
+    return passaNome && passaTipo; 
+  });
+
   if (pokemonsFiltrados.length === 0) {
-    document.querySelector("#pokemon-grid").innerHTML =
-      "<p class='erro-busca'> Nenhum Pokémon encontrado.</p>";
-
-    document.querySelector(".page-numbers").innerHTML = "";
-    document.querySelector(".page-next").innerHTML = "";
-    document.querySelector(".page-prev").innerHTML = "";
-
+    document.querySelector("#pokemon-grid").innerHTML = 
+      "<p class='ERRO-BUSCA'>Nenhum Pokémon encontrado com esses filtros.</p>";
+    document.querySelector(".page-numbers").innerHTML = ""; 
     return;
   }
 
   paginaAtual = 1;
-  desenharTela(pokemonsFiltrados); // desenha os pokemons filtrados
-});
+  desenharTela(pokemonsFiltrados);
+}
 
 document.querySelector(".page-next").addEventListener("click", function () {
   paginaAtual++;
