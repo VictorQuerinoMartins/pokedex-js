@@ -31,8 +31,8 @@ Este projeto vai além de um simples consumo de API. O objetivo foi construir um
     <td align="center"><strong>Modo Escuro</strong></td>
   </tr>
   <tr>
-    <td><img src="assets/modoclaro.png" width="500" alt="Pokédex no Modo Claro"></td>
-    <td><img src="assets/modoescuro.png" width="500" alt="Pokédex no Modo Escuro"></td>
+    <td><img src="pokedex/assets/modoclaro.png" width="500" alt="Pokédex no Modo Claro"></td>
+    <td><img src="pokedex/assets/modoescuro.png" width="500" alt="Pokédex no Modo Escuro"></td>
   </tr>
 </table>
 
