@@ -28,15 +28,10 @@ Este projeto demonstra a integração de APIs RESTful e a manipulação dinâmic
 
 - [ ] Implementar sistema de favoritos utilizando `localStorage`
 
-- [ ] Adicionar Skeleton Loading durante o carregamento da API
-
 - [ ] Criar filtro por tipo de Pokémon
 - [ ] Implementar ordenação por:
   - [ ] Nome
   - [ ] Número
   - [ ] Tipo
 
-- [ ] Melhorar a experiência em dispositivos mobile
-
 - [ ] Adicionar animações sutis na troca de páginas
-- [ ] Implementar tema Dark Mode
