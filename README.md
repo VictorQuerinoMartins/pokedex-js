@@ -1,37 +1,45 @@
-# ⚡ PokéDex
+# ⚡ PokéDex - Single Page Application (SPA)
 
-Uma aplicação interativa para exploração de Pokémon, desenvolvida com **JavaScript Vanilla**, focada no consumo técnico da [PokéAPI](https://pokeapi.co/).
+Uma aplicação interativa e responsiva para exploração de Pokémon, desenvolvida inteiramente com **JavaScript Vanilla**. O projeto foca no consumo técnico e eficiente da [PokéAPI](https://pokeapi.co/), aplicando conceitos avançados de manipulação de DOM e gerenciamento de estado no lado do cliente.
 
 ---
 
 ## 📝 Resumo do Projeto
-Este projeto demonstra a integração de APIs RESTful e a manipulação dinâmica do DOM. O objetivo principal é consolidar conceitos de **programação assíncrona** e gerenciamento de requisições encadeadas, onde uma lista inicial de dados é utilizada para disparar buscas detalhadas de cada entidade.
+Este projeto vai além de um simples consumo de API. O objetivo foi construir uma arquitetura robusta de front-end sem o uso de frameworks (como React ou Vue), demonstrando domínio em programação assíncrona, tratamento de erros e experiência do usuário (UX). A aplicação gerencia um grande volume de dados na memória, otimizando a renderização através de paginação matemática e filtros cruzados.
 
-### 🛠️ Tecnologias & Conceitos
-* **JS Vanilla (ES6+):** Utilização de `async/await` e `Fetch API`.
-* **Encadeamento de Requisições:** Fluxo de dados em dois níveis (Listagem -> Detalhes).
-* **Template Literals:** Geração dinâmica de componentes HTML via script.
-* **CSS Moderno:** Grid Layout e Flexbox para interface responsiva.
+## ✨ Funcionalidades em Destaque
 
+* **🔍 Filtros Combinados:** Busca por nome e tipo simultaneamente utilizando métodos de array de alta performance (`.filter` e `.some`).
+* **📄 Paginação Dinâmica:** Renderização otimizada fatiando os dados em tempo real para poupar processamento.
+* **🔗 State na URL (History API):** Sincronização silenciosa da página na URL (`?pagina=X`), permitindo atualizar a aba ou compartilhar o link sem perder o progresso.
+* **⏳ Skeleton Loading:** Feedback visual moderno durante o carregamento da API para aprimorar a UX.
+* **🛡️ Tratamento de Erros:** Prevenção de quebras de tela com `Early Return` e validação de buscas vazias.
+* **🌙 Dark Mode:** Alternância nativa entre temas claro e escuro usando manipulação de classes e CSS.
+
+## 🛠️ Tecnologias & Conceitos Aplicados
+
+* **JavaScript Vanilla (ES6+):** `async/await`, `Fetch API`, manipulação de Objetos e Arrays, Event Listeners.
+* **Engenharia de Front-End:** Componentização visual via Template Literals e separação de responsabilidades (DRY - *Don't Repeat Yourself*).
+* **CSS3 Moderno:** Grid Layout, Flexbox, Media Queries para responsividade total (Mobile First) e animações `@keyframes`.
+* **HTML5:** Semântica estrutural e acessibilidade.
 
 ## 📸 Preview do Projeto
- <img width="1863" height="921" alt="image" src="https://github.com/user-attachments/assets/dbdc7157-ff3d-4149-9a1e-974a91dfb0d8" />
 
+<table>
+  <tr>
+    <td align="center"><strong>Modo Claro</strong></td>
+    <td align="center"><strong>Modo Escuro</strong></td>
+  </tr>
+  <tr>
+    <td><img src="assets/modoclaro.png" width="500" alt="Pokédex no Modo Claro"></td>
+    <td><img src="assets/modoescuro.png" width="500" alt="Pokédex no Modo Escuro"></td>
+  </tr>
+</table>
 
+## 🚀 Como Executar Localmente
 
-## 🚀 Como Executar
+Não há necessidade de Node.js ou gerenciadores de pacotes. O projeto roda nativamente no navegador.
+
 1. Clone este repositório:
    ```bash
    git clone [https://github.com/SEU_USUARIO/pokedex-js.git](https://github.com/SEU_USUARIO/pokedex-js.git)
-
-## 📈 Possíveis Melhorias Futuras
-
-- [ ] Implementar sistema de favoritos utilizando `localStorage`
-
-- [ ] Criar filtro por tipo de Pokémon
-- [ ] Implementar ordenação por:
-  - [ ] Nome
-  - [ ] Número
-  - [ ] Tipo
-
-- [ ] Adicionar animações sutis na troca de páginas
