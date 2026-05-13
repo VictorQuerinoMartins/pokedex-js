@@ -59,7 +59,28 @@ function desenharTela(listaDeDados) {
   }
 }
 
+function desenharSkeleton() {
+  const grid = document.querySelector("#pokemon-grid");
+  grid.innerHTML = "";
+
+  for (let i = 0; i < itensPorPagina; i++) {
+    const skeletonHTML = `
+      <div class="pokemon-card skeleton-card">
+        <div class="card-top">
+          <div class="skeleton skeleton-text-small"></div>
+          <div class="skeleton skeleton-text-small"></div>
+        </div>
+        <div class="skeleton skeleton-img-box"></div>
+        <div class="skeleton skeleton-text-large"></div>
+      </div>
+    `;
+    grid.innerHTML += skeletonHTML;
+  }
+}
+
 async function chamarAPI() {
+  desenharSkeleton();
+
   const resposta = await fetch(URL);
   if (resposta.status === 200) {
     const obj = await resposta.json();
@@ -76,6 +97,12 @@ async function chamarAPI() {
       "<p class='erro-busca'> Erro ao carregar os dados.</p>";
   }
 }
+
+const btnTema = document.querySelector("#btn-tema");
+
+btnTema.addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+});
 
 const input = document.querySelector(".search-input"); // input para pesquisa
 
@@ -118,3 +145,5 @@ document.querySelector(".page-prev").addEventListener("click", function () {
 });
 
 chamarAPI();
+lucide.createIcons();
+

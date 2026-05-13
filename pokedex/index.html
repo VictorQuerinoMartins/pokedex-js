@@ -10,15 +10,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
 
   <body>
     <header class="header">
       <div class="header-logo">
-        <img src="/pokedex/assets/logo.png" alt="Logo PokéDex" class="logo" />
+        <img src="assets/logo.png" alt="Logo PokéDex" class="logo" />
       </div>
       <nav class="header-nav">
-        <a href="/pokedex/index.html" class="nav-pill active">Home</a>
+        <button id="btn-tema" class="theme-toggle" aria-label="Alternar tema">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+        <a href="index.html" class="nav-pill active">Home</a>
+
       </nav>
     </header>
 
@@ -48,7 +54,7 @@
       </div>
 
       <div class="pokemon-grid" id="pokemon-grid">
-        <!-- Rascunho do card — será gerado dinamicamente pelo script.js -->
+        <!-- será gerado dinamicamente pelojs -->
       </div>
 
       <div class="pagination">
